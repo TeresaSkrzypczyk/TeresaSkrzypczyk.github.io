@@ -659,7 +659,7 @@ textarea {
 
 .inside {
     text-align:justify;
-    width: 500px;
+    max-width: 500px;
     padding: 50px 0;
     height: 1200px;
 }
@@ -699,4 +699,42 @@ textarea {
 
 #message {
     margin-bottom: 1rem;
+}
+
+.stacktable { width: 50%; }
+.st-head-row { padding-top: 1em; }
+.st-head-row.st-head-row-main { font-size: 1.5em; padding-top: 0; }
+.st-key { width: 49%; text-align: right; padding-right: 1%; }
+.st-val { width: 49%; padding-left: 1%; }
+
+
+
+/* RESPONSIVE EXAMPLE */
+
+.stacktable.large-only { display: table; }
+.stacktable.small-only { display: none; }
+
+@media (max-width: 800px) {
+    .stacktable.large-only { display: none; }
+    .stacktable.small-only { display: table; }
+    .stacktable { width: 100%}
+}
+
+table caption {
+    padding: .5em 0;
+}
+
+.title-head {
+    text-align: left;
+    padding-top: 1rem;
+}
+
+.main-table {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+tr td:last-child, tr th:last-child {
+    text-align: right;
 }
