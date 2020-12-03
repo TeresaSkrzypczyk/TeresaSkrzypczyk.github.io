@@ -401,7 +401,7 @@ header .logo {
     display: inline-block;
     font-size: 1.5rem;
     font-weight: 900;
-    padding: 0.25rem 0.5rem;
+    margin-top: -.5rem;
 }
 
 @keyframes mylogo {
@@ -444,16 +444,21 @@ header ul li:hover {
 @media (min-width: 820px) {
     header {
         justify-content: space-between;
+        margin-top: -1rem;
     }
     header ul {
         display: block;
+    }
+
+    header .logo {
+        margin-top: 0;
     }
 }
 
 .mobile-section {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: .5rem;
+    left: .5rem;
 }
 
 .mobile-section button {
