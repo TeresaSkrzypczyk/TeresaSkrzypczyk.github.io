@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var recipe = document.getElementsByClassName('show-recipe');
 
     recipe[0].addEventListener('click', function (e) {
-        var parentEl = this.parentElement.parentElement;
+        var parentEl = this.parentElement.parentElement.parentElement;
         var favoriteRecipe = parentEl.getElementsByClassName('favorite-recipe');
 
         if (favoriteRecipe[0].style.display === "flex") {
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 return items;
             };
 
-            // find nearest parent element
+            //find nearest parent element
             var closest = function closest(el, fn) {
                 return el && (fn(el) ? el : closest(el.parentNode, fn));
             };
@@ -194,8 +194,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (fromURL) {
                     if (options.galleryPIDs) {
-                        // parse real index when custom PIDs are used
-                        // http://photoswipe.com/documentation/faq.html#custom-pid-in-url
+                        /* parse real index when custom PIDs are used
+                        http://photoswipe.com/documentation/faq.html#custom-pid-in-url */
                         for (var j = 0; j < items.length; j++) {
                             if (items[j].pid == index) {
                                 options.index = j;
